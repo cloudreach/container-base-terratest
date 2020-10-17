@@ -1,0 +1,17 @@
+# Start by ignoring everything
+*
+
+### Whitelist
+# Go code
+!/*.go
+!/dry/*.go
+
+# Go module files
+!/go.mod
+!/go.sum
+
+!/dry/go.mod
+!/dry/go.sum
+
+# Entrypoint script
+!scripts/entrypoint.sh

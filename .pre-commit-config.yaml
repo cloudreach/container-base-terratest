@@ -1,0 +1,23 @@
+# TL;DR setup:
+#
+# 1. brew install pre-commit
+# 2. pre-commit install
+
+fail_fast: true
+
+repos:
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: no-commit-to-branch
+        args: ["--branch", "master"]
+      - id: pretty-format-json
+        args: ["--autofix"]
+      - id: trailing-whitespace
+
+  - repo: git://github.com/golangci/golangci-lint
+    rev: v1.19.1
+    hooks:
+      - id: golangci-lint
